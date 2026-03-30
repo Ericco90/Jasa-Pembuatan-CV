@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVPro.id | Jasa Pembuatan CV Profesional & ATS Friendly</title>
+    <meta name="description" content="Bikin CV Profesional yang dilirik HRD dalam 10 menit. Proses cepat, desain modern, dan harga terjangkau.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cv-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-900 tracking-tight">CVPro<span class="text-blue-500">.id</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                    <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                    <a href="#layanan" class="hover:text-blue-600 transition">Layanan</a>
+                    <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
+                    <a href="#cara-order" class="hover:text-blue-600 transition">Cara Order</a>
+                    <a href="#testimoni" class="hover:text-blue-600 transition">Testimoni</a>
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20buat%20CV" class="bg-blue-900 text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">Order Sekarang</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-slate-600 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 p-4 space-y-4 shadow-xl">
+            <a href="#home" class="block py-2 text-slate-700 font-medium">Home</a>
+            <a href="#layanan" class="block py-2 text-slate-700 font-medium">Layanan</a>
+            <a href="#portfolio" class="block py-2 text-slate-700 font-medium">Portfolio</a>
+            <a href="#cara-order" class="block py-2 text-slate-700 font-medium">Cara Order</a>
+            <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20buat%20CV" class="block w-full text-center bg-blue-900 text-white py-3 rounded-xl font-bold">Order Sekarang</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left fade-in">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-blue-700 uppercase bg-blue-50 rounded-full">#1 CV Service in Indonesia</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                    Bikin CV Profesional yang <span class="text-blue-600">Dilirik HRD</span> dalam 10 Menit
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg mx-auto md:mx-0">
+                    Bantu fresh graduate & profesional naik level. Desain modern, ATS friendly, dan proses kilat hanya 1 hari kerja.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20buat%20CV" class="bg-blue-900 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition flex items-center justify-center gap-2">
+                        Buat CV Sekarang <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#portfolio" class="border border-slate-200 bg-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition text-center">
+                        Lihat Contoh
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-blue-100 rounded-3xl blur-2xl opacity-50 -z-10"></div>
+                    <img src="image/hero.png" alt="CV Preview" class="rounded-2xl shadow-2xl w-full border-4 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="py-20 bg-white border-y border-slate-100 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center fade-in">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 text-blue-600">
+                        <i data-lucide="check-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">ATS Friendly</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Lolos sistem scan HRD perusahaan besar.</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 text-blue-600">
+                        <i data-lucide="layout" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">Desain Modern</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Layout estetik, profesional, & eye-catching.</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 text-blue-600">
+                        <i data-lucide="refresh-cw" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">Revisi Gratis</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Kami pastikan hasil sesuai keinginan Anda.</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 text-blue-600">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">Proses Cepat</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">CV Anda selesai dalam waktu kurang dari 24 jam.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN & HARGA -->
+    <section id="layanan" class="py-24 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Pilihan Paket Hemat</h2>
+            <p class="text-slate-500">Investasi kecil untuk karir yang lebih besar.</p>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <!-- Basic -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all fade-in">
+                <h3 class="text-xl font-bold mb-2">BASIC</h3>
+                <div class="text-3xl font-bold mb-6 text-blue-900">Rp15.000</div>
+                <ul class="space-y-4 mb-8 text-slate-600 text-sm">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> CV ATS Friendly</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> 1 Pilihan Desain</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Format PDF High Res</li>
+                    <li class="flex items-center gap-2 text-slate-300 italic"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i> Tanpa Revisi</li>
+                </ul>
+                <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20order%20Paket%20BASIC" class="block w-full py-3 text-center border border-blue-900 text-blue-900 rounded-xl font-bold hover:bg-blue-900 hover:text-white transition">Pesan via WhatsApp</a>
+            </div>
+            <!-- Standard -->
+            <div class="bg-white p-8 rounded-3xl border-2 border-blue-600 shadow-2xl shadow-blue-200 relative transform md:scale-105 fade-in">
+                <div class="absolute top-0 right-8 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full">TERPOPULER</div>
+                <h3 class="text-xl font-bold mb-2 text-blue-900">STANDARD</h3>
+                <div class="text-3xl font-bold mb-6 text-blue-900">Rp25.000</div>
+                <ul class="space-y-4 mb-8 text-slate-600 text-sm">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> CV ATS Friendly</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Desain Visual Menarik</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Format PDF & PNG</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Revisi 1x</li>
+                </ul>
+                <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20order%20Paket%20STANDARD" class="block w-full py-3 text-center bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition">Pesan via WhatsApp</a>
+            </div>
+            <!-- Premium -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all fade-in">
+                <h3 class="text-xl font-bold mb-2">PREMIUM</h3>
+                <div class="text-3xl font-bold mb-6 text-blue-900">Rp50.000</div>
+                <ul class="space-y-4 mb-8 text-slate-600 text-sm">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> CV + Desain Eksklusif</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Optimasi Isi (Copywriting)</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Konsultasi Karir</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Unlimited Revisi (3 hari)</li>
+                </ul>
+                <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20order%20Paket%20PREMIUM" class="block w-full py-3 text-center border border-blue-900 text-blue-900 rounded-xl font-bold hover:bg-blue-900 hover:text-white transition">Pesan via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    </section> <!-- tutup layanan dulu -->
+
+<!-- BONUS SECTION (FULL WIDTH & CENTER) -->
+<section class="py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+
+        <div class="bg-blue-50 p-10 rounded-3xl text-center shadow-lg fade-in">
+
+            <p class="font-bold text-blue-900 text-2xl mb-4">
+                🎯 BONUS BIAR CEPAT DIPANGGIL INTERVIEW
+            </p>
+
+            <p class="text-slate-600 leading-relaxed mb-4">
+                + Template jawaban interview <br>
+                + Tips lolos HRD <br>
+                + File editable (khusus Premium)
+            </p>
+
+            <p class="text-sm text-red-500 mt-2 font-semibold">
+                ⚠️ Bonus hanya untuk order hari ini
+            </p>
+
+            <!-- CTA -->
+            <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20buat%20CV"
+            class="inline-block mt-6 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition shadow-md">
+                Ambil Bonus & Order Sekarang
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-24 bg-slate-50 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Portfolio Hasil Kerja</h2>
+                <p class="text-slate-500">Sudah membantu ratusan klien mendapatkan pekerjaan impian.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sample 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md cv-card-hover fade-in">
+                    <div class="aspect-[3/4] bg-slate-200">
+                        <img src="image/1.png">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="font-bold text-slate-800">Fresh Graduate (Marketing)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest">Minimalist Design</p>
+                    </div>
+                </div>
+                <!-- Sample 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md cv-card-hover fade-in">
+                    <div class="aspect-[3/4] bg-slate-200">
+                        <img src="image/2.png">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="font-bold text-slate-800">Senior Developer (ATS)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest">Clean Layout</p>
+                    </div>
+                </div>
+                <!-- Sample 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md cv-card-hover fade-in">
+                    <div class="aspect-[3/4] bg-slate-200">
+                        <img src="image/3.png">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="font-bold text-slate-800">Creative Designer (Visual)</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest">Modern Professional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARA ORDER -->
+    <section id="cara-order" class="py-24 bg-white px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Cara Order Gampang Banget</h2>
+            <div class="relative">
+                <!-- Connection Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2"></div>
+                
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    <div class="text-center fade-in">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold shadow-lg shadow-blue-200">1</div>
+                        <h4 class="font-bold mb-2">Pesan & Kirim Data</h4>
+                        <p class="text-sm text-slate-500">Pilih paket dan kirim data diri via WhatsApp.</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold shadow-lg shadow-blue-200">2</div>
+                        <h4 class="font-bold mb-2">Proses Pengerjaan</h4>
+                        <p class="text-sm text-slate-500">CV diproses cepat 1-2 hari kerja oleh tim ahli.</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold shadow-lg shadow-blue-200">3</div>
+                        <h4 class="font-bold mb-2">Revisi & Finalisasi</h4>
+                        <p class="text-sm text-slate-500">Lakukan revisi jika ada yang kurang pas.</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold shadow-lg shadow-blue-200">4</div>
+                        <h4 class="font-bold mb-2">File Terkirim</h4>
+                        <p class="text-sm text-slate-500">CV siap dikirim dalam format PDF berkualitas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="py-24 bg-blue-900 text-white px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Kata Mereka</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-800/50 p-8 rounded-3xl border border-blue-700 fade-in">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="italic mb-6 opacity-90">"Setelah ganti CV ke CVPro, minggu depannya langsung dipanggil interview 3 kali berturut-turut. Padahal sebelumnya sepi banget."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="image/gambar2.png" 
+class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
+                        <div>
+                            <p class="font-bold text-sm">Andini Putri</p>
+                            <p class="text-xs opacity-60">Admin Staff</p>
+                            <p class="text-xs text-green-400 mt-1">
+✔ Sudah diterima kerja
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-800/50 p-8 rounded-3xl border border-blue-700 fade-in">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="italic mb-6 opacity-90">"Gak nyangka harganya semurah ini tapi kualitas desainnya berasa premium. Adminnya juga ramah dan pengerjaannya kilat."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="image/gambar3.png" 
+                         class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
+                        <div>
+                            <p class="font-bold text-sm">Budi Santoso</p>
+                            <p class="text-xs opacity-60">IT Developer</p>
+                            <p class="text-xs text-green-400 mt-1">✔ Sudah diterima kerja</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-800/50 p-8 rounded-3xl border border-blue-700 fade-in">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="italic mb-6 opacity-90">"Sangat puas dengan hasilnya! CV jadi jauh lebih profesional dan lebih percaya diri pas mau ngelamar ke kantor idaman."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="image/gambar4.png" 
+                        class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
+                        <div>
+                            <p class="font-bold text-sm">Rina Amelia</p>
+                            <p class="text-xs opacity-60">Fresh Graduate</p>
+                            <p class="text-xs text-green-400 mt-1">✔ Sudah diterima kerja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+<section class="py-16 bg-slate-50 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+        <div>
+            <h3 class="text-4xl font-bold text-blue-600">500+</h3>
+            <p class="text-slate-500">CV berhasil dibuat</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-blue-600">95%</h3>
+            <p class="text-slate-500">Dipanggil Interview</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-blue-600">24 Jam</h3>
+            <p class="text-slate-500">Proses Pengerjaan</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-2 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10">Pertanyaan Umum</h2>
+
+        <div class="space-y-6">
+            <div>
+                <h4 class="font-bold">Apakah data saya aman?</h4>
+                <p class="text-slate-500 text-sm">100% aman dan tidak akan dibagikan ke pihak lain.</p>
+            </div>
+            <div>
+                <h4 class="font-bold">Berapa lama proses pengerjaan?</h4>
+                <p class="text-slate-500 text-sm">1–2 hari kerja tergantung paket.</p>
+            </div>
+            <div>
+                <h4 class="font-bold">Apakah bisa revisi?</h4>
+                <p class="text-slate-500 text-sm">Ya, sesuai paket yang dipilih.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA KUAT -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto bg-blue-600 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl fade-in">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Mau CV Profesional Sekarang?</h2>
+            <p class="text-lg opacity-90 mb-10">Mulai sekarang dan tingkatkan peluang kamu dipanggil interview perusahaan impian.</p>
+            <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20buat%20CV" class="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-slate-50 transition shadow-lg">
+                <i data-lucide="message-square" class="w-6 h-6"></i> Chat WhatsApp Sekarang
+            </a>
+            <p class="mt-4 text-red-500 font-bold text-sm ">
+⚠️ Slot terbatas hanya 10 klien per hari
+</p>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-24 px-4 bg-blue-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/2 fade-in">
+                <h2 class="text-3xl font-bold mb-8">Hubungi Kami</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Email</p>
+                            <p class="text-slate-500">ericco1916@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">WhatsApp</p>
+                            <p class="text-slate-500">+62 856 4161 2901</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Jam Kerja</p>
+                            <p class="text-slate-500">Senin - Sabtu (09.00 - 18.00 WIB)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in">
+                <form class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Pesan</label>
+                        <textarea rows="4" placeholder="Apa yang ingin Anda tanyakan?" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- MAP & LOKASI -->
+<section class="py-20 px-4 bg-blue-100">
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Title -->
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-2">Lokasi Kami</h2>
+            <p class="text-slate-500 text-sm">
+                Melayani pembuatan CV seluruh Indonesia (Online & Offline)
+            </p>
+        </div>
+
+        <!-- Map -->
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+            <iframe 
+                src="https://www.google.com/maps?q=Kemiriamba,Jatibarang,Brebes&output=embed"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Address Info -->
+        <div class="mt-8 text-center">
+            <p class="font-semibold text-slate-800">
+                📍 Kemiriamba, Jatibarang, Brebes, Jawa Tengah
+            </p>
+            <p class="text-sm text-slate-500 mt-2">
+                Bisa order online via WhatsApp atau datang langsung sesuai janji temu
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div>
+                <span class="text-2xl font-bold text-blue-900 tracking-tight">CVPro<span class="text-blue-500">.id</span></span>
+                <p class="text-slate-500 mt-2">Partner karir terpercaya di Indonesia.</p>
+            </div>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-blue-600"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-blue-600"><i data-lucide="facebook"></i></a>
+                <a href="#" class="hover:text-blue-600"><i data-lucide="twitter"></i></a>
+            </div>
+            <p class="text-sm text-slate-400">© 2024 CVPro.id - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20buat%20CV" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition active:scale-95 group">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+        <span class="absolute right-20 bg-white text-slate-800 px-4 py-2 rounded-lg text-sm font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none border border-slate-100">Pesan CV Sekarang?</span>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2', 'bg-white', 'shadow-sm');
+                nav.classList.remove('bg-white/80');
+            } else {
+                nav.classList.remove('py-2', 'bg-white', 'shadow-sm');
+                nav.classList.add('bg-white/80');
+            }
+        });
+
+        // Simple Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
